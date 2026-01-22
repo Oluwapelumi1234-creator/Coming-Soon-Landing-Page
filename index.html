@@ -1,0 +1,104 @@
+<!--
+  Project: Coming Soon Landing Page
+  Author: Odujoko Favour Oluwapelumi
+  GitHub: https://github.com/Oluwapelumi1234-creator
+  Description: Animated coming soon page with countdown and particle effects
+  Date: 22 January 2026
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="gradient-bg"></div>
+    <canvas id="particles"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                Favour
+            </div>
+        </header>
+
+        <main class="main-content">
+            <h1 class="title">Something Amazing Is Coming</h1>
+
+            <p class="subtitle">
+                A next-generation digital experience crafted with passion, creativity,
+                and cutting-edge technology.  
+                <span>Get ready to be blown away.</span>
+            </p>
+
+            <!-- Countdown -->
+            <div class="countdown">
+                <div class="time-card">
+                    <span id="days">00</span>
+                    <small>DAYS</small>
+                </div>
+                <div class="time-card">
+                    <span id="hours">00</span>
+                    <small>HOURS</small>
+                </div>
+                <div class="time-card">
+                    <span id="minutes">00</span>
+                    <small>MINUTES</small>
+                </div>
+                <div class="time-card">
+                    <span id="seconds">00</span>
+                    <small>SECONDS</small>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <section class="features">
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized for speed and smooth performance.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure</h3>
+                    <p>Built with modern security standards.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-magic"></i>
+                    <h3>Magical UI</h3>
+                    <p>Animations that feel alive and engaging.</p>
+                </div>
+            </section>
+
+            <!-- Notify -->
+            <form class="notify-box" id="emailForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Notify Me</button>
+            </form>
+        </main>
+    </div>
+
+    <footer class="credit">
+    Built & Designed by <a href="https://github.com/Oluwapelumi1234-creator" target="_blank">
+        Odujoko Favour Oluwapelumi
+    </a>
+</footer>
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

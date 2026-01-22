@@ -1,0 +1,211 @@
+/*
+  Project: Coming Soon Landing Page
+  Author: Odujoko Favour Oluwapelumi
+  GitHub: https://github.com/Oluwapelumi1234-creator
+  Description: Styling, animations, and visual effects
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Gradient animation */
+.gradient-bg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    animation: gradientMove 10s infinite alternate;
+    z-index: -3;
+}
+
+@keyframes gradientMove {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(60deg); }
+}
+
+#particles {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+}
+
+/* Layout */
+.container {
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo i {
+    color: #00ffd5;
+    margin-right: 8px;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 60px;
+    animation: slideDown 1.2s ease;
+}
+
+.subtitle {
+    max-width: 700px;
+    margin: 20px 0 40px;
+    font-size: 18px;
+    opacity: 0.85;
+    animation: fadeUp 1.5s ease;
+}
+
+.subtitle span {
+    color: #00ffd5;
+    font-weight: 600;
+}
+
+/* Countdown */
+.countdown {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.time-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    border-radius: 20px;
+    min-width: 110px;
+    animation: float 4s infinite ease-in-out;
+}
+
+.time-card span {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.time-card small {
+    display: block;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+.time-card:nth-child(2){animation-delay:.3s}
+.time-card:nth-child(3){animation-delay:.6s}
+.time-card:nth-child(4){animation-delay:.9s}
+
+/* Features */
+.features {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    width: 230px;
+    border-radius: 18px;
+    transition: .4s;
+    transform-style: preserve-3d;
+}
+
+.feature i {
+    font-size: 30px;
+    color: #00ffd5;
+    margin-bottom: 10px;
+}
+
+.feature:hover {
+    transform: rotateX(10deg) rotateY(-10deg) scale(1.05);
+    box-shadow: 0 25px 60px rgba(0,255,213,.35);
+}
+
+/* Notify */
+.notify-box {
+    display: flex;
+    gap: 10px;
+}
+
+.notify-box input {
+    padding: 14px;
+    width: 260px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.notify-box button {
+    padding: 14px 25px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    background: #00ffd5;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.notify-box button:hover {
+    background: #00c7a7;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from { opacity:0; transform: translateY(-40px); }
+    to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity:0; transform: translateY(40px); }
+    to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.credit {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.credit a {
+    color: #00ffd5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
